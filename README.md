@@ -1,1 +1,2 @@
 # MineralIDGUI
+This program extends the functionality of the MineralID console application and adds a JavaFX GUI. Minerals can be searched by various properties like hardness, name, color, streak (color), etc. Functionality for adding new minerals and modifying existing minerals is also included. Mineral data is loaded from a csv file. Future iterations will likely move this to a NoSQL database as sql queries seems to do much of what I'm attempting more efficiently.  
