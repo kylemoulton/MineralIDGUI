@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="400.0" prefWidth="500.0"
+	xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+	<children>
+		<GridPane layoutX="30.0" layoutY="54.0"
+			AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="40.0"
+			AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="20.0">
+			<columnConstraints>
+				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"
+					prefWidth="100.0" />
+				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"
+					prefWidth="100.0" />
+				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"
+					prefWidth="100.0" />
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
+			</rowConstraints>
+
+			<children>
+				<Label text="Mineral Name" />
+				<Label text="Color" GridPane.rowIndex="1" />
+				<Label text="Streak" GridPane.rowIndex="2" />
+				<Label text="Luster" GridPane.rowIndex="3" />
+				<Label text="Diaphaneity" GridPane.rowIndex="4" />
+				<Label text="Other Property" GridPane.rowIndex="5" />
+				<Label text="Fracture" GridPane.rowIndex="6" />
+				<Label text="Cleavage" GridPane.rowIndex="7" />
+				<Label text="Hardness" GridPane.rowIndex="8" />
+				<Label text="Specific Gravity" GridPane.rowIndex="9" />
+
+				<TextField fx:id="mineralNameTextField"
+					GridPane.columnIndex="1" GridPane.columnSpan="2" />
+				<TextField fx:id="colorTextField" GridPane.columnIndex="1"
+					GridPane.columnSpan="2" GridPane.rowIndex="1" />
+				<TextField fx:id="streakTextField" GridPane.columnIndex="1"
+					GridPane.columnSpan="2" GridPane.rowIndex="2" />
+				<TextField fx:id="lusterTextField" GridPane.columnIndex="1"
+					GridPane.columnSpan="2" GridPane.rowIndex="3" />
+				<TextField fx:id="diaphaneityTextField"
+					GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+				<TextField fx:id="otherTextField" GridPane.columnIndex="1"
+					GridPane.columnSpan="2" GridPane.rowIndex="5" />
+				<ComboBox fx:id="fractureComboBox" onAction="#handleFractureSelected"
+					prefWidth="210.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+				<ComboBox fx:id="cleavageComboBox" prefWidth="150.0"
+					GridPane.columnIndex="1" GridPane.rowIndex="7" />
+				<TextField fx:id="hardLowTextField" maxWidth="75.0"
+					prefWidth="75.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT"
+					GridPane.rowIndex="8" />
+				<TextField fx:id="hardHighTextField" maxWidth="75.0"
+					prefWidth="75.0" GridPane.columnIndex="2" GridPane.halignment="RIGHT"
+					GridPane.rowIndex="8" />
+				<TextField fx:id="specGravLowTextField" maxWidth="75.0"
+					prefWidth="75.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT"
+					GridPane.rowIndex="9" />
+				<TextField fx:id="specGravHighTextField" maxWidth="75.0"
+					prefWidth="75.0" GridPane.columnIndex="2" GridPane.halignment="RIGHT"
+					GridPane.rowIndex="9" />
+
+				<Label text="Planes of cleavage" GridPane.columnIndex="2"
+					GridPane.rowIndex="7">
+					<GridPane.margin>
+						<Insets left="10.0" />
+					</GridPane.margin>
+				</Label>
+				<Label text="Low" GridPane.columnIndex="1" GridPane.rowIndex="8">
+					<GridPane.margin>
+						<Insets left="35.0" />
+					</GridPane.margin>
+				</Label>
+				<Label text="High" GridPane.columnIndex="2" GridPane.rowIndex="8">
+					<GridPane.margin>
+						<Insets left="35.0" />
+					</GridPane.margin>
+				</Label>
+				<Label text="Low" GridPane.columnIndex="1" GridPane.rowIndex="9">
+					<GridPane.margin>
+						<Insets left="35.0" />
+					</GridPane.margin>
+				</Label>
+				<Label text="High" GridPane.columnIndex="2" GridPane.rowIndex="9">
+					<GridPane.margin>
+						<Insets left="35.0" />
+					</GridPane.margin>
+				</Label>
+			</children>
+
+		</GridPane>
+		<ButtonBar layoutX="260.0" layoutY="346.0" prefHeight="40.0"
+			prefWidth="200.0" AnchorPane.bottomAnchor="15.0"
+			AnchorPane.rightAnchor="20.0">
+			<buttons>
+				<Button mnemonicParsing="false" onAction="#handleOk" text="Submit" />
+				<Button mnemonicParsing="false" onAction="#handleCancel"
+					text="Cancel" />
+			</buttons>
+		</ButtonBar>
+		<Label layoutX="40.0" layoutY="358.0" maxWidth="240.0"
+			minHeight="20.0" minWidth="240.0"
+			text="Tip: Separate multuple values with a comma OR a space. ex. red,black,brown..."
+			wrapText="true" AnchorPane.bottomAnchor="15.0" />
+	</children>
+</AnchorPane>
